@@ -1,0 +1,16 @@
+Requirements
+
+1) API Test Suite for https://restful-booker.herokuapp.com
+
+1.Implement positive and negative tests for at least 3 endpoints on the API
+2.Include at least one unhappy path and one boundary condition per endpoint
+3.Validate response contracts (for example, with JSON Schema or equivalent)
+4.Parameterize a subset of tests with external data CSV or JSON is fine)
+
+2) UI Smoke Flow for https://www.saucedemo.com
+
+1.Build Page Objects for at least 2 pages
+2.Implement a happy‑path smoke covering login + one primary user journey
+3.Use sensible explicit waits, avoid sleeps, and keep locators resilient
+4.Capture a screenshot or HTML dump on failure
+

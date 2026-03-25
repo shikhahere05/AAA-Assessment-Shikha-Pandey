@@ -1,0 +1,57 @@
+================================================================================
+DECISION LOG - AAA ASSESSMENT 
+================================================================================
+
+1. SCOPE INTERPRETATION, TIMEBOXING IN TEST SELECTION AND COVERAGE
+
+API Test
+  - Picked 4 endpoints for testing
+  - 9 total tests covering happy paths, unhappy paths, and boundary conditions
+  - Parameterized with external JSON data
+
+UI Test
+  - Picked 2 pages for Page Object Model: LoginPage and InventoryPage
+  - Smoke test covering login -> browse -> checkout flow
+  - Error message validation on invalid login
+  - Screenshots on failure
+
+================================================================================
+2. STABILITY AND DATA STRATEGIES
+================================================================================
+
+Architecture Decisions
+  - Create a Monorepo to maintain unified commands and shared dependencies 
+    among API and UI tests
+  - Separate implementation from tests
+  - Reusable API client
+  - Page Objects pattern for clean code
+  - Use Test data builders - easy to extend
+  - Use External JSON test data for maintainability
+
+Stability Strategies
+
+API Stability:
+  - No sleeps; explicit status code waits
+  - Reusable client with error handling
+
+UI Stability:
+  - 30s explicit waits
+  - Resilient locators
+  - Screenshots on failure
+
+Both:
+  - Shared Playwright version
+  - Proper error messages
+
+================================================================================
+3. WHAT WE COULD ADD (IF MORE TIME)
+================================================================================
+
+  - More UI negative tests (invalid inputs)
+  - Add more tests for UI flows
+  - Performance assertions (API < 500ms)
+  - CI/CD pipeline (GitHub Actions)
+  - Test isolation (cleanup bookings after tests)
+  - Enhanced reporting (Allure, metrics dashboard)
+
+

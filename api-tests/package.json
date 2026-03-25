@@ -1,0 +1,10 @@
+{
+  "name": "api-tests",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:report": "playwright show-report",
+    "format": "prettier --write ."
+  }
+}

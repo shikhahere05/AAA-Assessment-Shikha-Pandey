@@ -1,0 +1,25 @@
+{
+  "name": "aaa-assignment",
+  "version": "1.0.0",
+  "description": "API and UI test suite",
+  "private": true,
+  "workspaces": [
+    "api-tests",
+    "ui-tests"
+  ],
+  "scripts": {
+    "api-test": "npm run test --workspace=api-tests",
+    "ui-test": "npm run test --workspace=ui-tests",
+    "ui-test-headless": "npm run test -- --project=chromium --workspace=ui-tests",
+    "ui-test:headed": "npm run test:headed --workspace=ui-tests",
+    "ui-test:report": "npm run test:report --workspace=ui-tests",
+    "test:all": "npm run test:all:sequential",
+    "test:all:sequential": "npm run api-test && npm run ui-test",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "eslint": "^8.0.0",
+    "prettier": "^2.8.0"
+  }
+}
